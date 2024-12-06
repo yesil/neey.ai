@@ -192,7 +192,7 @@ async function initRecording() {
     }
 
     displayEl.textContent = "Yazıya dönüştürülüyor...";
-    const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+    const audioBlob = new Blob(audioChunks, { type: "audio/mp4" });
     audioChunks = [];
 
     try {
@@ -257,7 +257,7 @@ function resetToInitialState() {
 // Transcription
 async function transcribeAudio(audioBlob) {
   const formData = new FormData();
-  formData.append("file", audioBlob, "audio.webm");
+  formData.append("file", audioBlob, "audio.mp4");
   formData.append("model", "whisper-1");
 
   const response = await fetch(
