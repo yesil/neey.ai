@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#000000"/>
+  <title>Neey AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="keyScreen" class="container" style="display:none;">
+    <h1 class="title">API Anahtarı Girişi</h1>
+    <div class="display" style="font-size:1rem;">
+      Lütfen OpenAI API anahtarınızı girin.
+    </div>
+    <input id="apiKeyInput" type="text" class="text-input" placeholder="OpenAI API Anahtarı" style="width:90%; max-width:400px; font-size:1rem; margin-bottom:1rem;"/>
+    <button id="saveKeyBtn" class="btn">Kaydet</button>
+  </div>
+
+  <div id="mainScreen" class="container" style="display:none;">
+    <h1 class="title">Neey AI</h1>
+    <div id="display" class="display">Mikrofona dokunun, konuşun, tekrar dokunun.</div>
+    <button id="recordBtn" class="btn">🎤 Başla</button>
+    <button id="cancelBtn" class="btn" style="display:none;">✖ İptal</button>
+  </div>
+
+  <div id="answerScreen" class="answer-container" style="display:none;">
+    <div id="qaWrapper" class="qa-wrapper">
+      <div id="qaDisplay" class="display scrollable"></div>
+    </div>
+    <div id="recommendedQuestions" class="recommended-questions"></div>
+    <div class="bottom-buttons">
+      <button id="askAgainBtn" class="btn">Sor</button>
+      <button id="moreBtn" class="btn">Daha</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
