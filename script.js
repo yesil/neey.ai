@@ -203,7 +203,7 @@ async function initRecording() {
     }
 
     displayEl.textContent = "Yazıya dönüştürülüyor...";
-    const audioBlob = new Blob(audioChunks, { type: "audio/mp4" });
+    const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
     audioChunks = [];
 
     try {
